@@ -1,50 +1,76 @@
-# React + TypeScript + Vite
+# RGB to Hex Color Converter
+This is a simple RGB to Hex Color Converter built with React, TypeScript, Vite, and Tailwind CSS. The app allows you to input RGB values, converts them to a Hex color code, and provides a feature to copy the Hex code to your clipboard.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Convert RGB to Hex: Input Red, Green, and Blue values between 0 and 255, and the app converts them to a Hexadecimal color code.
+- Clipboard Support: Copy the generated Hex code to the clipboard by clicking on the copy icon.
+- Paste RGB Values: You can paste a space-separated RGB value (e.g., 33 126 196) into the first input (Red), and it will automatically populate all three inputs (Red, Green, and Blue).
 
-Currently, two official plugins are available:
+## Technologies Used
+- React: A JavaScript library for building user interfaces.
+- TypeScript: Typed superset of JavaScript that provides static typing.
+- Vite: A fast build tool that serves your app during development.
+- Tailwind CSS: A utility-first CSS framework for building responsive UIs.
+- PostCSS: Used for processing Tailwind CSS.
+- Autoprefixer: Adds vendor prefixes to CSS rules for cross-browser compatibility.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+### Prerequisites
+Before you begin, ensure you have the following installed on your machine:
 
-## Expanding the ESLint configuration
+- Node.js (v18 or above)
+- npm (Node Package Manager)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Steps to Install and Run
+1. Clone the Repository
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Clone this repository to your local machine:
+```bash
+git clone https://github.com/your-username/rgb-to-hex-converter.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Navigate to the Project Directory
+```bash
+cd rgb-to-hex-converter
 ```
+
+2. Install Dependencies
+
+Install the required dependencies by running:
+
+```bash
+npm install
+```
+
+3. Run the App
+
+Start the Vite development server:
+
+```bash
+npm run dev
+```
+
+4. Open the App
+
+Open your browser and navigate to the local development server:
+
+```bash
+http://localhost:3000
+```
+
+## Usage
+1. Enter RGB Values: You can either manually enter values for Red, Green, and Blue or paste a space-separated RGB value (e.g., 33 126 196) into the first input (Red).
+2. Convert to Hex: Click the "Convert to Hex" button, and the Hex color code will be displayed.
+3. Copy to Clipboard: Click the clipboard icon to copy the generated Hex code to your clipboard.
+4. See Color Preview: The box below the Hex code will show a preview of the color based on the RGB or Hex values.
+
+## Example
+To convert the RGB value `33 126 196`:
+
+- Red: 33
+- Green: 126
+- Blue: 196
+
+The app will display the Hex color code: `#217ec4`.
+
+#
