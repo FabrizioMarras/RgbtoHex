@@ -32,6 +32,22 @@ const ColorConverter: React.FC = () => {
     }
   };
 
+  // Function to handle paste event and auto-populate RGB inputs
+  const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
+    event.preventDefault(); // Prevent default paste behavior
+    const pastedData = event.clipboardData.getData("Text").trim();
+    
+    // Split the pasted data by spaces
+    const rgbArray = pastedData.split(/\s+/).map(Number);
+
+    // If there are exactly 3 values (for RGB), update the inputs
+    if (rgbArray.length === 3) {
+      setR(rgbArray[0]);
+      setG(rgbArray[1]);
+      setB(rgbArray[2]);
+    }
+  };
+
   return (
     <div className="flex flex-col items-center mt-10 space-y-5">
       <h1 className="text-3xl font-bold">RGB to Hex Converter</h1>
@@ -43,6 +59,7 @@ const ColorConverter: React.FC = () => {
             type="number"
             value={r}
             onChange={(e) => setR(Number(e.target.value))}
+            onPaste={handlePaste} // Handle paste event here
             min="0"
             max="255"
             className="border p-2 rounded-md"
@@ -91,7 +108,6 @@ const ColorConverter: React.FC = () => {
           onClick={handleCopy}
           className="bg-gray-200 p-2 rounded-md hover:bg-gray-300"
         >
-          {/* You can use a simple clipboard icon or emoji */}
           📋
         </button>
       </div>
