@@ -26,12 +26,12 @@ Before you begin, ensure you have the following installed on your machine:
 
 Clone this repository to your local machine:
 ```bash
-git clone https://github.com/your-username/rgb-to-hex-converter.git
+git clone https://github.com/FabrizioMarras/RgbtoHex.git
 ```
 
 Navigate to the Project Directory
 ```bash
-cd rgb-to-hex-converter
+cd RgbtoHex
 ```
 
 2. Install Dependencies
